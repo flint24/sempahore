@@ -6,3 +6,8 @@
       apt:
         update_cache: yes
       become_method: sudo
+    - name: Upgrade packages
+      apt:
+        upgrade: safe
+        autoclean: yes
+      become_method: sudo
